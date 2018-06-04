@@ -1,0 +1,20 @@
+/*
+Create icons from SVG fragments
+Reference to sprite svg file is from .tmp folder task runner creates
+$id - id of the icon in svg sprite file
+$width - desired width of the icon you want - make sure to maintain the proportion
+$height - desired height of the icon you want - make sure to maintain the proportion
+$fill - desired color for the icon (for colors refer to styleguide and same name in variable file)
+*/
+
+@mixin icon($id, $width, $height, $fill){
+	background-image: url('../sprite.svg#'+$id);
+	width: $width;
+	height: $height;
+	fill: $fill
+}
+
+@mixin iconbg($id, $fill) {
+	background-image: url('../sprite.svg#'+$id);
+	fill: $fill;
+}

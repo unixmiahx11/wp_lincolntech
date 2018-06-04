@@ -1,0 +1,30 @@
+/*
+Create desired size and color L Shape enclosure
+$id - id of the icon in svg sprite file (this will always be lshape for now unless someone changes name)
+$width - desired width of the icon you want - make sure to maintain the proportion
+$height - desired height of the icon you want - make sure to maintain the proportion
+$fill - desired color for the icon (for colors refer to styleguide and same name in variable file)
+$pad - desired padding between lshape enclosure and enclosed block
+
+dependency - sprite-icons mixin
+*/
+
+@mixin lshape-enclosure($id, $width, $height, $fill, $pad){
+	padding: $pad;
+	//position: relative;
+	&:before, &:after{
+		@include icon($id, $width, $height, $fill);
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+	}
+	&:after{
+		top: 0px;
+		right: 0px;
+		left: auto;
+		transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+	}
+}

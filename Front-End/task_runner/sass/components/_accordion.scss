@@ -1,0 +1,30 @@
+/**ACCORDION
+** Please refer to Bootstrap Panel Partial for more declaration for buttons and copy 
+**/
+
+.accordion{
+	margin-top:30px;
+
+	.panel-body{
+		ul{
+			li{
+				a{
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $screen-md-min){ //dividing list of accordions into two and listing one half in left column and other in right column
+	.accordion-left, .accordion-right{
+		width: 50%;
+		float: left;
+	}
+	.accordion-left{
+		padding-right: 15px;
+	}
+	.accordion-right{
+		padding-left: 15px;
+	}
+}

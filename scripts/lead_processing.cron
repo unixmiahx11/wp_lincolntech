@@ -1,0 +1,2 @@
+# Every minute
+* * * * * root /usr/bin/php -q /home/sites/wp_lincoln_tech/scripts/lead_processing.php --send-leads

@@ -1,0 +1,18 @@
+/*
+* Generate declaration for heading underline decoration
+* $width - width of the underline (styleguide suggests 50px for LT)
+* $height - height of the underline (suggested for LT- 5px)
+* $color - color of the underline (should be LT Red for LT site)
+* $margin - we can use this to add negative space btwn headaer copy and underline deco. Format to use will be shorthand margin (suggest for left aligned - 0.7em 0 0 0, suggest for center aligned- 0.7em auto 0 auto)
+*/
+
+@mixin heading-deco($width, $height, $color, $margin){
+	&:after{
+		content: '';
+		display: block;
+		width: $width;
+		height: $height;
+		background: $color;
+		margin:$margin;
+	}
+}

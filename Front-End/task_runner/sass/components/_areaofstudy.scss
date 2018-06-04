@@ -1,0 +1,26 @@
+.area-of-study{
+	margin-top:30px;
+	padding-top: 30px;
+	border-top: 1px solid $lt-light-gray-1;
+	.button-links{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		flex-shrink: 0;
+
+		.button-link{
+			width: 100%;
+			
+			@media screen and (min-width: $screen-md-min){
+				width: 50%;
+
+				&:nth-child(even){
+					padding-left: 15px;
+				}
+				&:nth-child(odd){
+					padding-right: 15px;
+				}
+			}
+		}
+	}
+}

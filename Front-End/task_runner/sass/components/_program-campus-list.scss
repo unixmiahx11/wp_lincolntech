@@ -1,0 +1,42 @@
+.program-campus-list{
+	position: relative;
+	
+	&:before{
+		content: '';
+		display: block;
+		border-top: 1px solid $lt-light-gray-1;
+		width: 90%;
+		position: absolute;
+		top: 0;
+		left: 5%;
+
+		@media screen and (min-width: $screen-sm-min){
+			width: 720px;
+			left: 50%;
+			margin-left: -360px;
+		}
+		@media screen and (min-width: $screen-md-min){
+			width: 940px;
+			margin-left: -470px;
+
+		}
+		@media screen and (min-width: $screen-lg-min){
+			width: 1140px;
+			margin-left: -570px;
+
+		}
+	}
+
+	&:after{
+		content: '';
+		display: block;
+		@include icon(borderarr, 15px , 13px, #ccc);
+		width: 20px;
+		height: 18px;
+		position: absolute;
+		top: -5px;
+		left: 50%;
+		margin-left: -10px;
+	}
+
+}

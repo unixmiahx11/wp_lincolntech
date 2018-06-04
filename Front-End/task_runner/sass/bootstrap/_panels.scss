@@ -1,0 +1,87 @@
+//
+// Panels
+// --------------------------------------------------
+
+
+// Base class
+.panel {
+  width: 100%;
+  padding: 5px 0;  
+}
+
+.panel-title{
+  
+  font-size: 1em;
+  margin: 0;
+  
+
+  a{
+    background: $lt-light-gray-3;
+    border-radius: 4px;
+    padding: 15px;
+    color: $lt-black;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding-right: 46px;
+    position: relative;
+
+    &:after{
+      @include icon(minus, 16px, 16px, $lt-red);
+      width: 16px;
+      width: 16px;
+      display: block;
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top:-8px;
+      right: 15px;
+    }
+
+    &.collapsed{
+      &:after{
+        @include icon(plus, 16px, 16px, $lt-red);
+      width: 16px;
+      width: 16px;
+      display: block;
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top:-8px;
+      right: 15px;
+      }
+    }
+
+    &:hover{
+      background: $lt-light-gray-1;
+    }
+  }
+}
+
+// Panel contents
+.panel-body {
+  @include clearfix;
+  padding: 15px;
+  margin: 0;
+
+  ul, ol{
+    margin: 0;
+
+    li:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+// Optional heading
+.panel-heading {
+  
+}
+
+// Within heading, strip any `h*` tag of its default margins for spacing.
+.panel-title {
+}
+
+
+

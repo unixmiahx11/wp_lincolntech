@@ -1,0 +1,134 @@
+/**TEXT ICON Component
+This is a three column text icon component.
+If more icons are introduced, please add them here at the bottom along with icons that are already there.
+**/
+
+.iconboxes{
+}
+.iconbox{
+	padding-bottom : $grid-gutter-width;
+	margin-bottom: $grid-gutter-width;
+	border-bottom: 1px solid $lt-light-gray-2;
+	position: relative;
+	@include clearfix;
+	overflow: hidden;
+	
+	&:last-child{
+		padding-bottom: 0;
+		border-bottom:0;
+	}
+
+	p{
+		text-align: left;
+	}
+
+	@media screen and (min-width: $screen-sm-min){	
+		padding-bottom: 0;
+		margin-bottom: 0;
+		border-bottom: 0;
+		p{
+			text-align: center;
+		}
+	}
+
+	&:nth-child(even){
+		border-left: 1px solid $lt-light-gray-2;
+		border-right: 1px solid $lt-light-gray-2;
+	}
+}
+
+.iconbox-icon {
+	width: 60px;
+	height: 60px;
+	margin-top: ($grid-gutter-width/2);
+	display: block;
+
+	
+	@media screen and (min-width: $screen-sm-min){
+		width: 100%;
+		height: auto;
+		margin-top: 0;
+	}
+}
+
+.iconbox-copy{
+	margin-left: 90px;
+	margin-top: -75px;
+	
+	@media screen and (min-width: $screen-sm-min){
+		width: 100%;
+		margin-left: 0;
+		margin-top: 0;
+		padding: 0 2.5em;
+	}
+
+	p:last-child{
+		margin-bottom: 0;
+	}
+	h2 a{
+		color: $lt-dark-gray-1;
+		text-decoration: none;
+
+		&:hover{
+			color: $lt-red;
+			text-decoration: underline;
+		}
+	}
+}
+
+/*
+Here are three icons used in this component.
+Mobile breakpoint will not have lshape decorations for icons only after 768px the icons will have decoration.
+*/
+.icon-campuses{
+	@include icon(campuses, 60px, 60px, $lt-red);
+	width: 60px;
+	height: 60px;
+	display: block;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	@media screen and (min-width: $screen-sm-min){
+		width: 148px;
+		height: 148px;
+		margin: 0 auto;
+		margin-bottom: $grid-gutter-width;
+		@include lshape-enclosure(lshape, 20px, 28px, $lt-light-gray-2, 44px);
+	}
+}
+.icon-books{
+	@include icon(books, 60px, 60px, $lt-red);
+	width: 60px;
+	height: 60px;
+	display: block;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	@media screen and (min-width: $screen-sm-min){
+		width: 148px;
+		height: 148px;
+		margin: 0 auto;
+		margin-bottom: $grid-gutter-width;
+		@include lshape-enclosure(lshape, 20px, 28px, $lt-light-gray-2, 44px);
+	}
+}
+.icon-clipboard{
+	@include icon(clipboard, 60px, 60px, $lt-red);
+	width: 60px;
+	height: 60px;
+	display: block;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	@media screen and (min-width: $screen-sm-min){
+		width: 148px;
+		height: 148px;
+		margin: 0 auto;
+		margin-bottom: $grid-gutter-width;
+		@include lshape-enclosure(lshape, 20px, 28px, $lt-light-gray-2, 44px);
+	}
+}
+

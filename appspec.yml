@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/sites/wp_lincoln_tech
+hooks:
+  AfterInstall:
+    - location: scripts/aws_permissions.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: scripts/aws_symlinks.sh
+      timeout: 300
+      runas: root
+

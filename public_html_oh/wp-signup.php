@@ -1,0 +1,1 @@
+../public_html/wp-signup.php

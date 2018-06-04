@@ -1,0 +1,105 @@
+/*
+TEXT VIDEO Component
+*/
+.teaser{
+	
+	background: $lt-light-gray-3;
+	overflow: hidden;
+
+	.container{
+		.row{
+			
+			@media screen and (min-width: $screen-sm-min){
+				display: table;
+				height: 100%;
+			}
+
+		}
+	}
+}
+
+@media screen and (min-width: $screen-sm-min){
+	.teaser-copy, .teaser-media-wpr{
+		display: table-cell;
+		height: 100%;
+		vertical-align: middle;
+		float: none !important;
+	}
+}
+
+.teaser-media{
+	position: relative;
+	@include lshape-enclosure(lshape, 20px, 27px, $lt-light-gray-2, 20px);
+
+	@media screen and (min-width: $screen-sm-min){
+		@include lshape-enclosure(lshape, 40px, 55px, $lt-light-gray-2, 20px);
+	}
+
+	a.video{
+		display: block;
+		position: relative;
+		&:after{
+			content: '';
+			display: block;
+			@include icon(play, 40px, 48px, $lt-red);
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			top: 50%; margin-top:-50px;
+			left: 50%; margin-left: -50px;
+			background-color: rgba(255,255, 255, 0.9);
+			background-position: 60% 50%;
+			background-size: 40px 48px;
+			background-repeat: no-repeat;
+			border-radius: 50%;
+
+		}
+
+		&:hover{
+			&:after{
+				opacity: 0.8;
+			}
+		}
+	}
+
+	img{
+		width: 100%;
+	}
+}
+
+
+	.teaser--top-shadow{
+		overflow: hidden;
+		position: relative;
+		&:before{
+			content: '';
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+			height: 250px;
+			background: #f4f4f4;
+			border-radius: 50%;
+			position: absolute;
+			top:-250px;
+			box-shadow: 0px 7px 20px 7px hsl(0, 0%, 90%);
+
+		}
+	}
+
+	.teaser--bottom-shadow{
+		overflow: hidden;
+		position: relative;
+		&:after{
+			content: '';
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+			height: 250px;
+			background: #f4f4f4;
+			border-radius: 50%;
+			position: absolute;
+			bottom:-250px;
+			box-shadow: 0px -7px 20px 7px hsl(0, 0%, 90%);
+
+		}
+	}

@@ -1,0 +1,47 @@
+/** GLOBAL STICKY HEADER
+bootstrap partials
+- navbar
+- buttoons
+
+#critial
+**/
+
+.navbar-cta{
+	display: table;
+	height: 52px;
+	float: right;
+}
+
+.navbar-cta--phone, .navbar-cta--request{
+	display: table-cell;
+	vertical-align: middle
+}
+.navbar-cta--phone{
+	
+	a{
+		display: inline-block;
+		color: $lt-black;
+		text-decoration: none;
+		font-size: 1.412em;
+		font-weight: bold;
+		position: relative;
+		padding-left: 34px;
+		line-height: 1;
+
+		&:hover{
+			color: $lt-red;
+			text-decoration: underline;
+		}
+	}
+}
+.navbar-cta--request{
+	padding-left: 20px;
+}
+.icon-phone{
+	display: block;
+	@include icon(phone, 24px, 24px, $lt-red); //refer to sprite-icons mixin
+	position: absolute;
+	top: 50%;
+	margin-top:-12px;
+	left: 0;
+}
